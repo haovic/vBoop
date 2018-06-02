@@ -42,7 +42,7 @@ extension SCNNode {
         }
     }
 }
-extension RangeReplaceableCollection where IndexDistance == Int {
+extension RangeReplaceableCollection {
     mutating func keepLast(_ elementsToKeep: Int) {
         if count > elementsToKeep {
             self.removeFirst(count - elementsToKeep)
@@ -199,7 +199,7 @@ class FocusSquare: SCNNode {
     
     private func scaleBasedOnDistance(camera: ARCamera?) -> Float {
         if let camera = camera {
-            let distanceFromCamera = (self.worldPosition - SCNVector3.positionFromTransform(camera.transform)).length()
+            let distanceFromCamera = (self.worldPosition - (camera.transform.positionFromTransform())).length()
             // This function reduces size changes of the focus square based on the distance by scaling it up if it far away,
             // and down if it is very close.
             // The values are adjusted such that scale will be 1 in 0.7 m distance (estimated distance when looking at a table),

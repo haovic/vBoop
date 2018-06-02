@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		986F7E8D20C2EF39003AB500 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E8C20C2EF39003AB500 /* FocusSquare.swift */; };
 		986F7E9020C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */; };
+		986F7E9220C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */; };
 		98B7C21F20C2484A0094231F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C21E20C2484A0094231F /* AppDelegate.swift */; };
 		98B7C22120C2484A0094231F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22020C2484A0094231F /* art.scnassets */; };
 		98B7C22320C2484A0094231F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C22220C2484A0094231F /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		986F7E8C20C2EF39003AB500 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+MultipleFunctions.swift"; sourceTree = "<group>"; };
+		986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "matrix_float4x4+PositionFromTransform.swift"; sourceTree = "<group>"; };
 		98B7C21B20C2484A0094231F /* ARTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B7C21E20C2484A0094231F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B7C22020C2484A0094231F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */,
+				986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B7C22320C2484A0094231F /* ViewController.swift in Sources */,
+				986F7E9220C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift in Sources */,
 				986F7E8D20C2EF39003AB500 /* FocusSquare.swift in Sources */,
 				98B7C21F20C2484A0094231F /* AppDelegate.swift in Sources */,
 				986F7E9020C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift in Sources */,
