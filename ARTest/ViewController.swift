@@ -1,59 +1,59 @@
+////
+////  ViewController.swift
+////  ARTest
+////
+////  Created by Victor Hao on 6/1/18.
+////  Copyright © 2018 Victor Hao. All rights reserved.
 //
-//  ViewController.swift
-//  ARTest
 //
-//  Created by Victor Hao on 6/1/18.
-//  Copyright © 2018 Victor Hao. All rights reserved.
+import UIKit
+import SceneKit
+import ARKit
 //
-
-//import UIKit
-//import SceneKit
-//import ARKit
+class ViewController: UIViewController, ARSCNViewDelegate {
 //
-//class ViewController: UIViewController, ARSCNViewDelegate {
-//
-//    @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet var sceneView: ARSCNView!
 //
 //    var ball = SCNNode()
-//    var box = SCNNode()
+    var box = SCNNode()
 //
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Set the view's delegate
-//        sceneView.delegate = self
-//
-//        // Show statistics such as fps and timing information
-//        sceneView.showsStatistics = true
-//
-//        // Create a new scene
-//        let scene = SCNScene(named: "art.scnassets/MainScene.scn")!
-//
-//        // Set the scene to the view
-//        sceneView.scene = scene
-//
-//        //Create actions to delay scene setup for 1.5 seconds
-//        let wait:SCNAction = SCNAction.wait(duration: 1.5)
-//        let runAfter:SCNAction = SCNAction.run { _ in
-//            self.setupScene(scene: scene)
-//        }
-//        let sequence:SCNAction = SCNAction.sequence([wait, runAfter])
-//        sceneView.scene.rootNode.runAction(sequence)
-//
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        // Create a session configuration
-//        let configuration = ARWorldTrackingConfiguration()
-//        self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints, SCNDebugOptions.showPhysicsShapes]
-//
-//        configuration.planeDetection = .horizontal
-//
-//        // Run the view's session
-//        sceneView.session.run(configuration)
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Set the view's delegate
+        sceneView.delegate = self
+
+        // Show statistics such as fps and timing information
+        sceneView.showsStatistics = true
+
+        // Create a new scene
+        let scene = SCNScene(named: "art.scnassets/MainScene.scn")!
+
+        // Set the scene to the view
+        sceneView.scene = scene
+
+        //Create actions to delay scene setup for 1.5 seconds
+        let wait:SCNAction = SCNAction.wait(duration: 1.5)
+        let runAfter:SCNAction = SCNAction.run { _ in
+            self.setupScene(scene: scene)
+        }
+        let sequence:SCNAction = SCNAction.sequence([wait, runAfter])
+        sceneView.scene.rootNode.runAction(sequence)
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints, SCNDebugOptions.showPhysicsShapes]
+
+        configuration.planeDetection = .horizontal
+
+        // Run the view's session
+        sceneView.session.run(configuration)
+    }
 //
 //    // MARK: Actions
 //
@@ -110,12 +110,12 @@
 //
 //    }
 //
-//    func setupScene(scene: SCNScene) {
-//
-//        //create origin node
-//        let dummyNode = scene.rootNode.childNode(withName: "DummyNode", recursively: false)
-//        dummyNode?.position = SCNVector3(0, -5, -5)
-//
+    func setupScene(scene: SCNScene) {
+
+        //create origin node
+        let dummyNode = scene.rootNode.childNode(withName: "DummyNode", recursively: false)
+        dummyNode?.position = SCNVector3(0, -5, -5)
+
 //        //gestures
 //        //deafult 1f tap 1 time
 //        let ballBounceRecognizer = UITapGestureRecognizer(target: self, action: #selector((handleTap(sender:))))
@@ -128,34 +128,34 @@
 //            self.sceneView.addGestureRecognizer(ballBounceRecognizer)
 //            self.sceneView.addGestureRecognizer(ballShootRecognizer)
 //        }
-//
-//        //add default objects
-//        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
-//
-//            if (node.name == "sphere") {
-//                ball = node
-//                ball.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: ball, options: nil))
+
+        //add default objects
+        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
+
+//        if (node.name == "sphere") {
+//            ball = node
+//            ball.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: ball, options: nil))
 //                ball.physicsBody?.isAffectedByGravity = true
 //                ball.physicsBody?.restitution = 1
 //
-//            } else {
-//                box = node
-//                box.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(node:box, options: nil))
-//                box.physicsBody?.isAffectedByGravity = false
-//                box.physicsBody?.restitution = 1
+//        } else {
+//            box = node
+//            box.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape(node:box, options: nil))
+//            box.physicsBody?.isAffectedByGravity = false
+//            box.physicsBody?.restitution = 1
 //
 //            }
 //        }
-//
-//        //setup lighting
-//        let light = SCNLight()
-//        light.type = SCNLight.LightType.omni
-//        let lightNode = SCNNode()
-//        lightNode.light = light
-//        lightNode.position = SCNVector3(x: 1.5, y: 1.5, z: 1.5)
-//        scene.rootNode.addChildNode(lightNode)
-//
-//    }
+
+        //setup lighting
+        let light = SCNLight()
+        light.type = SCNLight.LightType.omni
+        let lightNode = SCNNode()
+        lightNode.light = light
+        lightNode.position = SCNVector3(x: 1.5, y: 1.5, z: 1.5)
+        scene.rootNode.addChildNode(lightNode)
+
+    }
 //
 //    override func viewWillDisappear(_ animated: Bool) {
 //        super.viewWillDisappear(animated)
@@ -168,181 +168,84 @@
 //        super.didReceiveMemoryWarning()
 //        // Release any cached data, images, etc that aren't in use.
 //    }
-//
+
 //
 //    // MARK: - ARSCNViewDelegate
 //
 ///*
-//    // Override to create and configure nodes for anchors added to the view's session.
+    // Override to create and configure nodes for anchors added to the view's session.
 //    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
 //        let node = SCNNode()
 //
 //        return node
 //    }
 //*/
+    
+    //SET THE SCENE WITH THE TEXT
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        guard let touch = touches.first else { return }
+//        let results = sceneView.hitTest(touch.location(in: sceneView), types: [ARHitTestResult.ResultType.featurePoint])
+//        guard let hitFeature = results.last else { return }
+//        let hitTransform = SCNMatrix4.init(hitFeature.worldTransform)
+//        // <- if higher than beta 1, use just this -> hitFeature.worldTransform
+//        let hitPosition = SCNVector3Make(hitTransform.m41,
+//                                         hitTransform.m42,
+//                                         hitTransform.m43)
+//        createPicture(hitPosition: hitPosition)
+//    }
+//    func createPicture(hitPosition : SCNVector3) {
+//        let newPicture = SCNText(string: "hello", extrusionDepth: 1)
+//        let material = SCNMaterial()
+//        material.diffuse.contents = UIColor.green
+//        newPicture.materials = [material]
+//        let newPictureNode = SCNNode()
+//        newPictureNode.position = hitPosition
+//        self.sceneView.scene.rootNode.addChildNode(newPictureNode)
+//        //  var imageMaterial = SCNMaterial()
+//        //   imageMaterial.isDoubleSided = false
+//        //    imageMaterial.diffuse.contents = UIImage(named: "vBoop Logo")
+//        //  newPicture.materials = [imageMaterial]
+//    }
+    
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
 //
-//    func session(_ session: ARSession, didFailWithError error: Error) {
-//        // Present an error message to the user
+//        // Set the view's delegate
+//        sceneView.delegate = self
+//
+//        // Show statistics such as fps and timing information
+//        sceneView.showsStatistics = true
+//
+//        // Create a new scene
+//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+//
+//        // Set the scene to the view
+//        sceneView.scene = scene
+//
+//
 //
 //    }
-//
-//    func sessionWasInterrupted(_ session: ARSession) {
-//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-//
-//    }
-//
-//    func sessionInterruptionEnded(_ session: ARSession) {
-//        // Reset tracking and/or remove existing anchors if consistent tracking is required
-//
-//    }
-//}
+    
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        // Present an error message to the user
 
-/*
- Copyright (C) 2016 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
- 
- Abstract:
- The primary view controller. The speach-to-text engine is managed an configured here.
- */
+    }
 
-import UIKit
-import Speech
+    func sessionWasInterrupted(_ session: ARSession) {
+        // Inform the user that the session has been interrupted, for example, by presenting an overlay
 
-public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
-    // MARK: Properties
-    
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
-    
-    private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
-    
-    private var recognitionTask: SFSpeechRecognitionTask?
-    
-    private let audioEngine = AVAudioEngine()
-    
-    @IBOutlet var textView: UITextView!
-    
-    @IBOutlet var recordButton: UIButton!
-    
-    // MARK: UIViewController
-    
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Disable the record buttons until authorization has been granted.
-        recordButton.isEnabled = false
     }
-    
-    override public func viewDidAppear(_ animated: Bool) {
-        speechRecognizer.delegate = self
-        
-        SFSpeechRecognizer.requestAuthorization { authStatus in
-            /*
-             The callback may not be called on the main thread. Add an
-             operation to the main queue to update the record button's state.
-             */
-            OperationQueue.main.addOperation {
-                switch authStatus {
-                case .authorized:
-                    self.recordButton.isEnabled = true
-                    
-                case .denied:
-                    self.recordButton.isEnabled = false
-                    self.recordButton.setTitle("User denied access to speech recognition", for: .disabled)
-                    
-                case .restricted:
-                    self.recordButton.isEnabled = false
-                    self.recordButton.setTitle("Speech recognition restricted on this device", for: .disabled)
-                    
-                case .notDetermined:
-                    self.recordButton.isEnabled = false
-                    self.recordButton.setTitle("Speech recognition not yet authorized", for: .disabled)
-                }
-            }
-        }
+
+    func sessionInterruptionEnded(_ session: ARSession) {
+        // Reset tracking and/or remove existing anchors if consistent tracking is required
+
     }
-    
-    private func startRecording() throws {
-        
-        // Cancel the previous task if it's running.
-        if let recognitionTask = recognitionTask {
-            recognitionTask.cancel()
-            self.recognitionTask = nil
-        }
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        try audioSession.setCategory(AVAudioSessionCategoryRecord)
-        try audioSession.setMode(AVAudioSessionModeMeasurement)
-        try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
-        
-        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        
-        let inputNode = self.audioEngine.inputNode
-        guard let recognitionRequest = recognitionRequest else { fatalError("Unable to created a SFSpeechAudioBufferRecognitionRequest object") }
-        
-        // Configure request so that results are returned before audio recording is finished
-        recognitionRequest.shouldReportPartialResults = true
-        
-        // A recognition task represents a speech recognition session.
-        // We keep a reference to the task so that it can be cancelled.
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
-            var isFinal = false
-            
-            if let result = result {
-                self.textView.text = result.bestTranscription.formattedString
-                isFinal = result.isFinal
-            }
-            
-            if error != nil || isFinal {
-                self.audioEngine.stop()
-                inputNode.removeTap(onBus: 0)
-                
-                self.recognitionRequest = nil
-                self.recognitionTask = nil
-                
-                self.recordButton.isEnabled = true
-                self.recordButton.setTitle("Start Recording", for: [])
-            }
-        }
-        
-        let recordingFormat = inputNode.outputFormat(forBus: 0)
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
-            self.recognitionRequest?.append(buffer)
-        }
-        
-        audioEngine.prepare()
-        
-        try audioEngine.start()
-        
-        textView.text = "(Go ahead, I'm listening)"
-    }
-    
-    // MARK: SFSpeechRecognizerDelegate
-    
-    public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
-        if available {
-            recordButton.isEnabled = true
-            recordButton.setTitle("Start Recording", for: [])
-        } else {
-            recordButton.isEnabled = false
-            recordButton.setTitle("Recognition not available", for: .disabled)
-        }
-    }
-    
-    // MARK: Interface Builder actions
-    
-    @IBAction func recordButtonTapped() {
-        if audioEngine.isRunning {
-            audioEngine.stop()
-            recognitionRequest?.endAudio()
-            recordButton.isEnabled = false
-            recordButton.setTitle("Stopping", for: .disabled)
-        } else {
-            try! startRecording()
-            recordButton.setTitle("Stop recording", for: [])
-        }
-    }
-    
 }
 
 
-
+}

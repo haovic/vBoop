@@ -1,19 +1,19 @@
-////
-////  AppDelegate.swift
-////  ARTest
-////
-////  Created by Victor Hao on 6/1/18.
-////  Copyright © 2018 Victor Hao. All rights reserved.
-////
 //
-//import UIKit
+//  AppDelegate.swift
+//  ARTest
 //
-//@UIApplicationMain
-//class AppDelegate: UIResponder, UIApplicationDelegate {
+//  Created by Victor Hao on 6/1/18.
+//  Copyright © 2018 Victor Hao. All rights reserved.
 //
-//    var window: UIWindow?
-//
-//
+
+import UIKit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+
 //    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 //        // Override point for customization after application launch.
 //        return true
@@ -40,29 +40,7 @@
 //    func applicationWillTerminate(_ application: UIApplication) {
 //        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 //    }
-//
-//
-//}
-//
 
 
-
-
-
-
-/*
- Copyright (C) 2016 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
- 
- Abstract:
- The application delegate.
- */
-
-import UIKit
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    var window: UIWindow?
 }
 

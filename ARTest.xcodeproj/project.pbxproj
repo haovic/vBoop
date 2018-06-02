@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3A3990C320C30F720030926E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22C20C2484A0094231F /* Info.plist */; };
+		3A3990CB20C346030030926E /* voiceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3990C620C31A8E0030926E /* voiceRecognition.swift */; };
 		986F7E9020C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */; };
 		986F7E9220C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */; };
 		98B7C21F20C2484A0094231F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C21E20C2484A0094231F /* AppDelegate.swift */; };
 		98B7C22120C2484A0094231F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22020C2484A0094231F /* art.scnassets */; };
-		98B7C22320C2484A0094231F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C22220C2484A0094231F /* ViewController.swift */; };
 		98B7C22620C2484A0094231F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22420C2484A0094231F /* Main.storyboard */; };
 		98B7C22820C2484A0094231F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22720C2484A0094231F /* Assets.xcassets */; };
 		98B7C22B20C2484A0094231F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22920C2484A0094231F /* LaunchScreen.storyboard */; };
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A3990C620C31A8E0030926E /* voiceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voiceRecognition.swift; sourceTree = "<group>"; };
+		3A3990C920C335200030926E /* ViewController+VoiceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+VoiceRecognition.swift"; sourceTree = "<group>"; };
 		986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+MultipleFunctions.swift"; sourceTree = "<group>"; };
 		986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "matrix_float4x4+PositionFromTransform.swift"; sourceTree = "<group>"; };
 		98B7C21B20C2484A0094231F /* ARTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 			children = (
 				986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */,
 				986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */,
+				3A3990C920C335200030926E /* ViewController+VoiceRecognition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				986F7E8E20C2F0C3003AB500 /* Extensions */,
+				3A3990C620C31A8E0030926E /* voiceRecognition.swift */,
 				98B7C21E20C2484A0094231F /* AppDelegate.swift */,
 				98B7C22020C2484A0094231F /* art.scnassets */,
 				98B7C22220C2484A0094231F /* ViewController.swift */,
@@ -277,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98B7C22320C2484A0094231F /* ViewController.swift in Sources */,
+				3A3990CB20C346030030926E /* voiceRecognition.swift in Sources */,
 				986F7E9220C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift in Sources */,
 				98B7C21F20C2484A0094231F /* AppDelegate.swift in Sources */,
 				986F7E9020C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift in Sources */,
