@@ -157,6 +157,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
+    //remove objects which fall too far
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        
+        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
+            if (node.name == "shot_ball") {
+                
+                if (node.presentation.position.z < -10) {
+                    
+                    node.removeFromParentNode()
+                    print("removed shot_ball")
+                    
+                }
+                
+            }
+            //otherwise check if object pos is too far from current viewer pos
+            
+        }
+        
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         

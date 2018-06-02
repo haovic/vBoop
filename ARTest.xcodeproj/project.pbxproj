@@ -116,13 +116,13 @@
 			children = (
 				986F7E8E20C2F0C3003AB500 /* Extensions */,
 				98B7C21E20C2484A0094231F /* AppDelegate.swift */,
+				986F7E8C20C2EF39003AB500 /* FocusSquare.swift */,
 				98B7C22020C2484A0094231F /* art.scnassets */,
 				98B7C22220C2484A0094231F /* ViewController.swift */,
 				98B7C22420C2484A0094231F /* Main.storyboard */,
 				98B7C22720C2484A0094231F /* Assets.xcassets */,
 				98B7C22920C2484A0094231F /* LaunchScreen.storyboard */,
 				98B7C22C20C2484A0094231F /* Info.plist */,
-				986F7E8C20C2EF39003AB500 /* FocusSquare.swift */,
 			);
 			path = ARTest;
 			sourceTree = "<group>";
