@@ -9,13 +9,22 @@
 import UIKit
 import SceneKit
 import ARKit
+import ARCL
+import CoreLocation
+import Firebase
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
-    @IBOutlet var sceneView: ARSCNView!
+    
+    //MARK: Properties
     
     var ball = SCNNode()
     var box = SCNNode()
+    var currentLocation: CLLocation?
+    var currentHeading: CLHeading?
+    var sceneLocationView = SceneLocationView()
+    let locationManager = CLLocationManager()
+    
+    @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +41,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         sceneView.scene = scene
         
-        //Create actions to delay scene setup for 1.5 seconds
+        // Create actions to delay scene setup for 1.5 seconds
         let wait:SCNAction = SCNAction.wait(duration: 1.5)
         let runAfter:SCNAction = SCNAction.run { _ in
             self.setupScene(scene: scene)
         }
         let sequence:SCNAction = SCNAction.sequence([wait, runAfter])
         sceneView.scene.rootNode.runAction(sequence)
+        
+        // Run the location scene when it comes into view
+        sceneLocationView.run()
+        view.addSubview(sceneLocationView)
+        // Start getting locations
+        startReceivingLocationChanges()
         
     }
     
@@ -53,6 +68,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Run the view's session
         sceneView.session.run(configuration)
+        // Run the location scene when it comes into view
+        sceneLocationView.run()
+        // Start getting locations again
+        startReceivingLocationChanges()
     }
     
     // MARK: Actions
@@ -157,36 +176,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    //remove objects which fall too far
-    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        
-        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
-            if (node.name == "shot_ball") {
-                
-                if (node.presentation.position.z < -10) {
-                    
-                    node.removeFromParentNode()
-                    print("removed shot_ball")
-                    
-                }
-                
-            }
-            //otherwise check if object pos is too far from current viewer pos
-            
-        }
-        
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         // Pause the view's session
         sceneView.session.pause()
+        // Pause the scenelocationview
+        sceneLocationView.pause()
+        
+        // Stop getting locations
+        locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingHeading()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        sceneLocationView.frame = view.bounds
     }
     
 
