@@ -17,12 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Holokit Logo" translatesAutoresizingMaskIntoConstraints="NO" id="E8P-w7-fJr">
-                                <rect key="frame" x="-411" y="145" width="1181" height="389"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Holokit Logo" translatesAutoresizingMaskIntoConstraints="NO" id="HQi-An-9aY">
+                                <rect key="frame" x="0.0" y="354" width="375" height="123"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="vBoop Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BjL-Eu-1mn">
+                                <rect key="frame" x="87" y="104" width="200" height="200"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HQi-An-9aY" secondAttribute="bottom" constant="190" id="DW7-eB-Ghj"/>
+                            <constraint firstItem="HQi-An-9aY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O7C-RC-QPo"/>
+                            <constraint firstItem="HQi-An-9aY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q2p-fG-ALD"/>
+                            <constraint firstItem="BjL-Eu-1mn" firstAttribute="centerX" secondItem="HQi-An-9aY" secondAttribute="centerX" id="sKQ-VK-zZr"/>
+                            <constraint firstItem="HQi-An-9aY" firstAttribute="top" secondItem="BjL-Eu-1mn" secondAttribute="bottom" constant="50" id="tnj-y4-gVs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -32,6 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Holokit Logo" width="1181" height="389"/>
+        <image name="Holokit Logo" width="375" height="123"/>
+        <image name="vBoop Logo" width="200" height="200"/>
     </resources>
 </document>
