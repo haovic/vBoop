@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		986F7E8D20C2EF39003AB500 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E8C20C2EF39003AB500 /* FocusSquare.swift */; };
+		3A3990C320C30F720030926E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22C20C2484A0094231F /* Info.plist */; };
 		986F7E9020C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */; };
 		986F7E9220C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */; };
 		98B7C21F20C2484A0094231F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C21E20C2484A0094231F /* AppDelegate.swift */; };
@@ -16,8 +16,6 @@
 		98B7C22620C2484A0094231F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22420C2484A0094231F /* Main.storyboard */; };
 		98B7C22820C2484A0094231F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22720C2484A0094231F /* Assets.xcassets */; };
 		98B7C22B20C2484A0094231F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22920C2484A0094231F /* LaunchScreen.storyboard */; };
-		98B7C23620C2484B0094231F /* ARTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C23520C2484B0094231F /* ARTestTests.swift */; };
-		98B7C24120C2484B0094231F /* ARTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C24020C2484B0094231F /* ARTestUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		986F7E8C20C2EF39003AB500 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		986F7E8F20C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+MultipleFunctions.swift"; sourceTree = "<group>"; };
 		986F7E9120C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "matrix_float4x4+PositionFromTransform.swift"; sourceTree = "<group>"; };
 		98B7C21B20C2484A0094231F /* ARTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +119,6 @@
 				98B7C22720C2484A0094231F /* Assets.xcassets */,
 				98B7C22920C2484A0094231F /* LaunchScreen.storyboard */,
 				98B7C22C20C2484A0094231F /* Info.plist */,
-				986F7E8C20C2EF39003AB500 /* FocusSquare.swift */,
 			);
 			path = ARTest;
 			sourceTree = "<group>";
@@ -255,6 +251,7 @@
 				98B7C22120C2484A0094231F /* art.scnassets in Resources */,
 				98B7C22B20C2484A0094231F /* LaunchScreen.storyboard in Resources */,
 				98B7C22820C2484A0094231F /* Assets.xcassets in Resources */,
+				3A3990C320C30F720030926E /* Info.plist in Resources */,
 				98B7C22620C2484A0094231F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +279,6 @@
 			files = (
 				98B7C22320C2484A0094231F /* ViewController.swift in Sources */,
 				986F7E9220C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift in Sources */,
-				986F7E8D20C2EF39003AB500 /* FocusSquare.swift in Sources */,
 				98B7C21F20C2484A0094231F /* AppDelegate.swift in Sources */,
 				986F7E9020C2F10D003AB500 /* SCNVector3+MultipleFunctions.swift in Sources */,
 			);
@@ -292,7 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98B7C23620C2484B0094231F /* ARTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98B7C24120C2484B0094231F /* ARTestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,10 +449,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Y7W4TQXYN;
+				DEVELOPMENT_TEAM = A4JV6BWUYW;
 				INFOPLIST_FILE = ARTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vBoop.ARTest;
+				PRODUCT_BUNDLE_IDENTIFIER = vBoop.vBoop5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,10 +464,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2Y7W4TQXYN;
+				DEVELOPMENT_TEAM = A4JV6BWUYW;
 				INFOPLIST_FILE = ARTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vBoop.ARTest;
+				PRODUCT_BUNDLE_IDENTIFIER = vBoop.vBoop5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
