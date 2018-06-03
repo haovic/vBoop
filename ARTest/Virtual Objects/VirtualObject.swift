@@ -217,7 +217,7 @@ extension VirtualObject {
         }
     }()
     
-    /// Returns a `VirtualObject` if one exists as an ancestor to the provided node.
+    // Returns a `VirtualObject` if one exists as an ancestor to the provided node.
     static func existingObjectContainingNode(_ node: SCNNode) -> VirtualObject? {
         if let virtualObjectRoot = node as? VirtualObject {
             return virtualObjectRoot

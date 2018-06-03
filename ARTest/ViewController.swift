@@ -24,11 +24,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    @IBOutlet var loginButton: UIButton!
+    
     // MARK: Properties
     var currentLocation: CLLocation?
     var currentHeading: CLHeading?
     var sceneLocationView = SceneLocationView()
     let locationManager = CLLocationManager()
+    
     
     // MARK: - UI Elements
     

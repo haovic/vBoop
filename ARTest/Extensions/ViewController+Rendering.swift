@@ -51,6 +51,13 @@ extension ViewController: VirtualObjectSelectionViewControllerDelegate {
             self.sceneView.scene.rootNode.addChildNode(virtualObject)
             self.sceneView.addOrUpdateAnchor(for: virtualObject)
         }
+        
+        print("rendering obj")
+        print(virtualObject.modelName)
+        // upload to firebase
+        uploadObjectInfo(location: virtualObject.position, position: virtualObject.orientation, name: virtualObject.modelName)
+        
+        
     }
     
     // MARK: - VirtualObjectSelectionViewControllerDelegate
