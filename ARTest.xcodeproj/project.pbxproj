@@ -37,9 +37,6 @@
 		986F7EC620C35DD5003AB500 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7EC520C35DD5003AB500 /* LoginController.swift */; };
 		986F7EC720C35DD5003AB500 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7EC520C35DD5003AB500 /* LoginController.swift */; };
 		986F7EC820C35DD5003AB500 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7EC520C35DD5003AB500 /* LoginController.swift */; };
-		986F7ECA20C35FA4003AB500 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7EC920C35FA4003AB500 /* UIColor+RGB.swift */; };
-		986F7ECB20C35FA4003AB500 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7EC920C35FA4003AB500 /* UIColor+RGB.swift */; };
-		986F7ECC20C35FA4003AB500 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F7EC920C35FA4003AB500 /* UIColor+RGB.swift */; };
 		98B7C21F20C2484A0094231F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C21E20C2484A0094231F /* AppDelegate.swift */; };
 		98B7C22120C2484A0094231F /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C22020C2484A0094231F /* art.scnassets */; };
 		98B7C22320C2484A0094231F /* ViewController_DEPRECATED.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B7C22220C2484A0094231F /* ViewController_DEPRECATED.swift */; };
@@ -94,7 +91,6 @@
 		986F7EBE20C34D87003AB500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		986F7EC120C35BBD003AB500 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		986F7EC520C35DD5003AB500 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		986F7EC920C35FA4003AB500 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		98B7C21B20C2484A0094231F /* ARTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B7C21E20C2484A0094231F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98B7C22020C2484A0094231F /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -153,7 +149,6 @@
 				986F7EB920C34A44003AB500 /* ViewController+Gestures.swift */,
 				986F7E9920C333E5003AB500 /* ViewController+Firebase.swift */,
 				986F7E9B20C33410003AB500 /* ViewController+Rendering.swift */,
-				986F7EC920C35FA4003AB500 /* UIColor+RGB.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -529,7 +524,6 @@
 				98B7C22320C2484A0094231F /* ViewController_DEPRECATED.swift in Sources */,
 				986F7EBC20C34AE3003AB500 /* ViewController+AnchorUpdate.swift in Sources */,
 				986F7E9C20C33410003AB500 /* ViewController+Rendering.swift in Sources */,
-				986F7ECA20C35FA4003AB500 /* UIColor+RGB.swift in Sources */,
 				986F7E9220C2F5A5003AB500 /* matrix_float4x4+PositionFromTransform.swift in Sources */,
 				986F7E9A20C333E5003AB500 /* ViewController+Firebase.swift in Sources */,
 				986F7EBA20C34A44003AB500 /* ViewController+Gestures.swift in Sources */,
@@ -556,7 +550,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B7C23620C2484B0094231F /* ARTestTests.swift in Sources */,
-				986F7ECB20C35FA4003AB500 /* UIColor+RGB.swift in Sources */,
 				986F7EC720C35DD5003AB500 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,7 +559,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B7C24120C2484B0094231F /* ARTestUITests.swift in Sources */,
-				986F7ECC20C35FA4003AB500 /* UIColor+RGB.swift in Sources */,
 				986F7EC820C35DD5003AB500 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

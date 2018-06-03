@@ -117,6 +117,7 @@ class ViewController: UIViewController {
         
         // Start the `ARSession`.
         resetTracking()
+        getNearbyObjectInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {

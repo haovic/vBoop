@@ -34,6 +34,7 @@ extension ViewController: CLLocationManagerDelegate {
         // Heading settings
         locationManager.headingFilter = 10
         locationManager.startUpdatingHeading()
+        getNearbyObjectInfo()
     }
     
     func locationManager(_ manager: CLLocationManager,
@@ -58,6 +59,7 @@ extension ViewController: CLLocationManagerDelegate {
         
         // update a class variable which stores the most recent location for immediate use
         currentLocation = lastLocation
+        getNearbyObjectInfo()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
